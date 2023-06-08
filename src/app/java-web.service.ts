@@ -75,7 +75,7 @@ export class JavaWebService {
     return this.http.delete(`${this.detailCart}/${id}`);
   }
 
-  getDetailsByCartId(cartId: any): Observable<DetailCartDTO[]> {
+    getDetailsByCartId(cartId: any): Observable<DetailCartDTO[]> {
     return this.http.get<DetailCartDTO[]>(`${this.detailCart}/${cartId}`);
   }
 
