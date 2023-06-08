@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="information.component.css">
+<section style="min-height: calc(100vh - 96px);">
+  <div class="container-fluid">
+    <div class="row h-25">
+      <div class="col-lg-2 pt-2 px-0">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                Chức năng
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <ul class="list-unstyled">
+                  <li><a routerLink="/home/product" class="p-2 text-secondary hover:text-primary" type="button">Mua
+                    hàng</a></li>
+                  <li><a routerLink="/home/info" class="p-2 text-secondary hover:text-primary" type="button">Xem thông
+                    tin cá nhân</a></li>
+                  <li><a routerLink="/home/history" class="p-2 text-secondary hover:text-primary" type="button">Xem lịch
+                    sử giao dịch</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-10">
+        <div class="row">
+          <section id="contact" class="contact">
+            <div class="container">
+              <div class="row justify-content-center">
+
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                  <div class="section-title">
+                    <h2>Thông Tin</h2>
+                  </div>
+
+                  <form  (submit)="onSubmit()" role="form" class="php-email-form">
+                    <div class="form-group">
+                      <label for="Name">Name :</label>
+                      <input type="text" class="form-control" name="Name" id="Name" required [(ngModel)]="account.name">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="username">UserName :</label>
+                      <input type="email" name="UserName" class="form-control" id="username" required [(ngModel)]="account.userName" >
+                    </div>
+
+                    <div class="form-group">
+                      <label for="password">PassWord :</label>
+                      <input type="password" class="form-control" name="PassWord" id="password" required [(ngModel)]="account.passWord">
+                    </div>
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-block" style=" margin-top: 50px;">Lưu</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+

@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="signup.component.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<div id="logreg-forms">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
+    <input type="text" id="user-name" class="form-control" placeholder="Fullname" formControlName="name"
+           required="" autofocus="">
+    <input type="email" id="user-email" class="form-control" placeholder="UserName" formControlName="userName"
+           required="" autofocus="">
+    <input type="password" id="user-pass" class="form-control" placeholder="Password" formControlName="passWord"
+           required="" autofocus="">
+    <h6 style="color: red"></h6>
+    <input type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" formControlName="passWord_X"
+           required="" autofocus="">
+    <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+    <a href="" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+  </form>
+</div>

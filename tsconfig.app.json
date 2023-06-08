@@ -6,7 +6,12 @@
     "types": []
   },
   "files": [
-    "src/main.ts"
+    "src/main.ts",
+    "src/app/model/Account.ts",
+    "src/app/model/DTO/BillDTO.ts",
+    "src/app/model/DetailCart.ts",
+    "src/app/model/Product.ts",
+    "src/app/model/Cart.ts"
   ],
   "include": [
     "src/**/*.d.ts"

@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="history.component.css">
+<section style="min-height: calc(100vh - 96px);">
+  <div class="container-fluid">
+    <div class="row h-25">
+      <div class="col-lg-2 pt-2 px-0">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                Chức năng
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <ul class="list-unstyled">
+                  <li><a routerLink="/home/product" class="p-2 text-secondary hover:text-primary" type="button">Mua
+                    hàng</a></li>
+                  <li><a routerLink="/home/info" class="p-2 text-secondary hover:text-primary" type="button">Xem thông
+                    tin cá nhân</a></li>
+                  <li><a routerLink="/home/history" class="p-2 text-secondary hover:text-primary" type="button">Xem lịch
+                    sử giao dịch</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-10">
+        <div class="row">
+          <div class="container">
+            <div class="section-title">
+              <h2>Lịch Sử</h2>
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th scope="col">UserName</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Totalbill</th>
+                  <th scope="col">Chi Tiết</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let bill of bills">
+                  <td>{{ bill.name }}</td>
+                  <td>{{ bill.date | date:'dd/MM/yyyy' }}</td>
+                  <td>{{ bill.totalBill }}</td>
+                  <td><a data-bs-toggle="modal" data-bs-target="#myModal" (click)="getDetailCart(bill.id_Cart)">Xem chi tiết</a></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <table class="table table-striped">
+          <tbody>
+          <tr *ngFor="let detail of detailCart, let i = index">
+            <td><img [src]="detail.img" alt="Product image" width="50"></td>
+            <td>{{ detail.productName }}</td>
+            <td>
+            <td >{{detail.amountProduct}}</td>
+            <td>{{ detail.price}}đ</td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">Tổng :</td>
+            <td >{{sum}}đ</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+

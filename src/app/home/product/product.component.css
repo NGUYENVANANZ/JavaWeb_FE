@@ -1,0 +1,44 @@
+.hover\:text-primary:hover {
+  color: #007bff !important;
+}
+a {
+  text-decoration: none;
+}
+
+.buttons_added {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons_added .minus,
+.buttons_added .plus {
+  background-color: #f0ad4e;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons_added .minus:hover,
+.buttons_added .plus:hover {
+  background-color: #eea236;
+}
+
+.input-qty {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.plus.is-form,
+.minus.is-form {
+  margin-left: 5px;
+}
+
+
