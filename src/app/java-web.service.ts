@@ -98,6 +98,9 @@ export class JavaWebService {
     return this.http.delete(`${this.products}/${id}`);
   }
 
+  searchProducts(keyword: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.products}/${keyword}`);
+  }
   //====================================================================================================================
   private cart = 'http://localhost:8080/cart';
 

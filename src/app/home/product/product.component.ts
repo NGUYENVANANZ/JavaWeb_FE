@@ -27,6 +27,16 @@ export class ProductComponent {
     this.sumX();
   }
 
+  ngAfterViewInit() {
+    let search: any = localStorage.getItem("search");
+    if (search != "") {
+      this.javaWebService.searchProducts(search).subscribe(
+        (products) => {
+          this.products = products;
+        })
+    }
+  }
+
   getProducts(page: number = 0, size: number = 6): void {
     this.javaWebService.getProducts(page, size)
       .subscribe(products => this.products = products);
@@ -58,7 +68,7 @@ export class ProductComponent {
 
   addToCart(idProduct: number, amount: any) {
     this.javaWebService.addProductToCart(localStorage.getItem("idCart"), idProduct, amount).subscribe(detail => {
-      this.details.push(detail)
+      this.getCartDetails();
       this.sumX()
       console.log('Thêm sản phẩm vào giỏ hàng thành công.');
     });

@@ -27,7 +27,7 @@ export class SigninComponent {
   ngOnInit(): void {
     localStorage.setItem("id", "")
     localStorage.setItem("idCart", "")
-
+    localStorage.setItem("search", "");
   }
 
   loginForm = new FormGroup({

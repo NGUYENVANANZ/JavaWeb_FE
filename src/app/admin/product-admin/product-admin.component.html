@@ -67,17 +67,18 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
         <input id="idProduct" required="" autofocus="" [(ngModel)]="p.idProduct" hidden>
+        Tên sản phầm :
         <input id="nameSP" class="form-control" required="" autofocus="" [(ngModel)]="p.nameSP">
         <br>
+        Giá :
         <input id="price" class="form-control" required="" [(ngModel)]="p.price">
         <br>
+        Ảnh :
         <input id="img" class="form-control" required="" [(ngModel)]="p.img">
         <br>
+        Số lượng
         <input id="amount" class="form-control" required="" [(ngModel)]="p.amount">
-        <br>
-        <input id="productType" class="form-control" required="" [(ngModel)]="p.productType">
         <br>
         <div class="modal-footer">
           <button type="button" class="btn btn-success" data-bs-dismiss="modal" (click)="updateProduct()"> Sửa</button>
@@ -103,15 +104,17 @@
       <!-- Modal body -->
       <div class="modal-body">
         <input id="idProductx" required="" autofocus="" [(ngModel)]="p.idProduct" hidden>
+        Tên sản phầm :
         <input id="nameSPx" class="form-control" required="" autofocus="" [(ngModel)]="p.nameSP">
         <br>
+        Giá :
         <input id="pricex" class="form-control" required="" [(ngModel)]="p.price">
         <br>
+        ẢNh :
         <input id="imgx" class="form-control" required="" [(ngModel)]="p.img">
         <br>
+        Số lượng :
         <input id="amountx" class="form-control" required="" [(ngModel)]="p.amount">
-        <br>
-        <input id="productTypex" class="form-control" required="" [(ngModel)]="p.productType">
         <br>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="creatProduct()"> Thêm</button>

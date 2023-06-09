@@ -7,8 +7,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <form class="d-flex me-auto my-2 my-lg-0" style="margin-left: 400px">
-          <input style="width: 400px" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Search</button>
+          <input [(ngModel)]="search" name="search" style="width: 400px" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit" (click)="onSearch()">Search</button>
         </form>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">

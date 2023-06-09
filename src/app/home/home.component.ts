@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 
 export class HomeComponent {
 
+  search : any = "";
+
+  onSearch() : void{
+    localStorage.setItem("search", this.search);
+    location.reload();
+  }
 }
